@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Toronto Star</title>
+    <link href='https://fonts.googleapis.com/css?family=Yeseva+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="styles/styles.css" /> -->
+
+    <style>
+    .active {
+        border: 2px solid tomato;
+    }
+    
+    .wrap {
+        border: 1px solid #eee;
+        padding: 10px;
+        margin: 10px;
+    }
+    </style>
+
+    <body>
+        <div class="wrapper">
+           <header>
+               <h2> My excitment level: <span class="how-jazzed"></span></h2>
+               <h2>And this is how concerned I am about my health: <span class="rabbit-food-level"></span></h2>
+               <h2>no. people<span class="how-many-people"></span> </h2>
+           </header>
+            <section class="wrap">
+                <nav>
+                    <ul class="excitment">
+                        <li data-excitment="1">1. I am JUST here for the snacks</li>
+                        <li data-excitment="2">2. I know the name of the starting QB</li>
+                        <li data-excitment="3">3. Not my favourite team, but I have a team to root for</li>
+                        <li data-excitment="4">4. My team is playing, pretty excited</li>
+                        <li data-excitment="5">5. CFL IS LIFE</li>
+                    </ul>
+
+                    <ul class="healthy">
+                        <li data-healthy="1">1. Healthy, please!</li>
+                        <li data-healthy="2">2. Every day is a cheat day.</li>
+                    </ul>
+
+                    <ul class="serving">
+                        <li data-serving="1">1. Just me.</li>
+                        <li data-serving="2">2. Just some close friends</li>
+                        <li data-serving="3">3. About a dozen people</li>
+                        <li data-serving="4">4. Literally the entire town</li>
+                    </ul>
+
+       <!--  
+                    
+                    <ul class="ul-spicy">
+                        <li data-spicy="1">1. Spice, please!</li>
+                        <li data-spicy="2">2. As long as there's no actual fire, I'm good</li>
+                        <li data-spicy="3">3. Spicy, like pepper? No thanks!</li>
+                    </ul>
+
+                     -->
+                </nav>
+                <button class="submit">GIVE ME THE SNACKS</button>
+            </section>
+
+            <section class="snacks"></section>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="scripts/js.js"></script>
+    </body>
+
+</html>
