@@ -3,24 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Toronto Star</title>
+    <title>Jessie Willms</title>
     <link href='https://fonts.googleapis.com/css?family=Yeseva+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="styles/styles.css" /> -->
-
-    <style>
-    .active {
-        border: 2px solid tomato;
-    }
-    
-    .wrap {
-        border: 1px solid #eee;
-        padding: 10px;
-        margin: 10px;
-    }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css" />
 
     <body>
         <div class="wrapper">
@@ -31,7 +19,8 @@
            </header>
             <section class="wrap">
                 <nav>
-                    <ul class="excitment">
+                    <ul class="excitment cf">
+                        <h3>how excited are you about the BIG game</h3>
                         <li data-excitment="1">1. I am JUST here for the snacks</li>
                         <li data-excitment="2">2. I know the name of the starting QB</li>
                         <li data-excitment="3">3. Not my favourite team, but I have a team to root for</li>
@@ -39,16 +28,22 @@
                         <li data-excitment="5">5. CFL IS LIFE</li>
                     </ul>
 
-                    <ul class="healthy">
-                        <li data-healthy="1">1. Healthy, please!</li>
-                        <li data-healthy="2">2. Every day is a cheat day.</li>
+                    <ul class="healthy cf">
+                        <h3>heathy or nah?</h3>
+                        <li data-healthy="1"> <img src="images/more-healthy.svg"> 1. Healthy, please!</li>
+                        <li data-healthy="2"><img src="images/less-healthy.svg"> 2. Every day is a cheat day.</li>
                     </ul>
 
-                    <ul class="serving">
-                        <li data-serving="1">1. Just me.</li>
-                        <li data-serving="2">2. Just some close friends</li>
-                        <li data-serving="3">3. About a dozen people</li>
-                        <li data-serving="4">4. Literally the entire town</li>
+                    <ul class="serving cf">
+                        <h3>how many people</h3>
+                        <input type="range" min="1" max="5" value="5" step="1" list="steps">
+                        <datalist id="steps">
+                            <option data-serving="1">1</option>
+                            <option data-serving="2">2</option>
+                            <option data-serving="3">3</option>
+                            <option data-serving="4">4</option>
+                            <option data-serving="5">5</option>
+                        </datalist>
                     </ul>
 
        <!--  
@@ -65,6 +60,9 @@
             </section>
 
             <section class="snacks"></section>
+            <footer>
+                <p>Icons by Isabel Foo</p>
+            </footer>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="scripts/js.js"></script>

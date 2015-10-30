@@ -1,42 +1,56 @@
 var app = {
 
 };
-// console.log(recipes.length)
+
 var recipes = [{
-    "recipe": "grilled cheese",
-    "excitment": "1",
+    "recipe": "vegan cheez its",
+    "excitment": "3",
     "howHealthy": "1",
-    "howManyPeople": "1"
+    "howManyPeople": "6",
+    "image":"images/vegan-cheez-its.jpg",
+    "link": "http://minimalistbaker.com/vegan-cheez-its/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+MinimalistBaker+(Minimalist+Baker)"
 }, {
-    "recipe": "avacado toast",
+    "recipe": "open PB + J",
     "excitment": "2",
     "howHealthy": "2",
-    "howManyPeople": "2"
+    "howManyPeople": "2",
+    "image":"images/",
+    "link": "http://talesofakitchen.com/breakfast/the-best-pbj-open-sandwich-how-to-make-pecan-butter-and-basic-raw-jam/"
 }, {
     "recipe": "apples and peanut butter",
     "excitment": "3",
     "howHealthy": "1",
-    "howManyPeople": "3"
+    "howManyPeople": "3",
+    "image":"images/",
+    "link": ""
 }, {
     "recipe": "terry loves yogurt",
     "excitment": "4",
     "howHealthy": "2",
-    "howManyPeople": "4"
+    "howManyPeople": "4",
+    "image":"images/",
+    "link": ""
 }, {
     "recipe": "turkey on rye",
     "excitment": "4",
     "howHealthy": "1",
-    "howManyPeople": "5"
+    "howManyPeople": "5",
+    "image":"images/",
+    "link": ""
 }, {
     "recipe": "ants on a log",
     "excitment": "5",
     "howHealthy": "2",
-    "howManyPeople": "2"
+    "howManyPeople": "2",
+    "image":"images/",
+    "link": ""
 }, {
     "recipe": "your spanish eyes on rye",
     "excitment": "4",
     "howHealthy": "1",
-    "howManyPeople": "2"
+    "howManyPeople": "2",
+    "image":"images/",
+    "link": ""
 }];
 
 var getsLevelofInerest = "";
@@ -53,12 +67,23 @@ $('.healthy li').click(function() {
 });
 
 var getsServingSize = "";
-$('.serving li').click(function() {
+// $('.serving li').click(function() {
+//     getsServingSize = $(this).attr('data-serving');
+//     $('.how-many-people').html(getsServingSize)
+// });
+
+$('#steps option').on('change', function() {
     getsServingSize = $(this).attr('data-serving');
+
+    pizza = $(this).val();
+    pizza3 = $(this).attr('data-serving')();
+
+    console.log('ok', pizza, pizza3)
     $('.how-many-people').html(getsServingSize)
 });
 
 $('li').click(function() {
+    $(this).siblings().removeClass('active');
     $(this).addClass('active');
 })
 
@@ -84,11 +109,28 @@ $('.submit').click(function() {
             var elephant = $(this).attr('data-elephant');
             if (apple == getsLevelofInerest && bunny == getsIfHealthyOrNot && elephant == servesNumberofServing) {
                 $(this).appendTo('.snacks')
-            } else {
-                // console.log('sorry no snacks for you!')
+            } else if (apple == getsLevelofInerest && bunny == getsIfHealthyOrNot) {
+                $(this).appendTo('.snacks');
+                console.log('no matches for servesNumberofServing')
+            } else if (apple == getsLevelofInerest && elephant == servesNumberofServing) {
+                $(this).appendTo('.snacks')
+                console.log('no matches for servesNumberofServing')
             };
         });
 
     };
 
 });
+
+
+
+app.init = function() {
+    var $columns = $('.excitment li');
+    var height = 0;
+    $columns.each(function () {
+      if ($(this).height() > height) {
+        height = $(this).height();
+      }
+    });
+    $columns.height(height);
+}
