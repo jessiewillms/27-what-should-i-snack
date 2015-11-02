@@ -1,14 +1,19 @@
 $num: 5;
 nav {
 	ul {
-		width: 100%;
 		margin: $m 0;
 		padding: $m;
-		li {
-			list-style-type: none;	
+		width: 100%;
+		background: $lg;
+
+		h3 {
+			font-size: 2em;
+			padding-bottom: $m;
+		}
+		li {	
 			float: left;
-				padding: $m;
-				// border: 2px solid $w;
+			padding: $m;
+			list-style-type: none;
 		}
 		&.healthy {
 			li {
@@ -18,9 +23,9 @@ nav {
 		}
 		&.excitment {
 			li {
-				max-width: (100% - $num) / $num;
 				margin-right: 1%;
 				min-height: 10px;
+				max-width: (100% - $num) / $num;
 			}
 		}
 		&.serving {
@@ -32,28 +37,44 @@ nav {
 }
 
 
+header {
+	
+	background-color: $c;
 
-.wrap {
-    border: 1px solid #eee;
-    padding: 10px;
-    margin: 10px;
+	h1 {
+		margin: 0;
+		padding: $p 10%;
+		color: $w;
+		text-align: center;
+		font-size: 8em;
+		line-height: .75;
+	}
+	img {
+		width: 100px;
+	}
 }
 
-img {
+
+.wrap {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+section img {
+    
     max-width: 75px;
-    display: block;
-    margin: 0 auto;
 }
 
 button {
+	margin: $m 0;
+	padding: $m;
+	width: 100%;
+	border: none;
 	background: $c;
 	color: $w;
-	border: none;
-	width: 100%;
-	padding: $m;
-	margin: $m 0;
 	&:hover {
-		background: darken($c, 10);
 		@include t;
+		background: darken($c, 10);
 	}
 }

@@ -1,7 +1,7 @@
-$body: 'Open Sans', Arial, sans-serif;
-$hed: "Raleway", Georgia;
+$sans: 'Open Sans', Arial, sans-serif;
+$sans2: "Roboto", Georgia;
 
-$lg: #999;
+$lg: lighten(#a1a1a1, 29);
 $g: #a1a1a1;
 $dg: #333;
 
@@ -15,7 +15,7 @@ $b: 2px solid #eee;
 $tb: 2px solid tomato;
 
 
-$p: 3%;
+$p: 5%;
 $m: 10px;
 
 $fw-reg: 400;

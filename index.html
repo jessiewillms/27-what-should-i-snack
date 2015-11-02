@@ -13,14 +13,15 @@
     <body>
         <div class="wrapper">
            <header>
-               <h2> My excitment level: <span class="how-jazzed"></span></h2>
-               <h2>And this is how concerned I am about my health: <span class="rabbit-food-level"></span></h2>
-               <h2>no. people<span class="how-many-people"></span> </h2>
+               <h1>snack attack</h1>
+               <img src="images/apple.svg">
+               <img src="images/waffles.svg">
            </header>
+           
             <section class="wrap">
                 <nav>
                     <ul class="excitment cf">
-                        <h3>how excited are you about the BIG game</h3>
+                        <h3>How excited are you about the BIG game</h3>
                         <li data-excitment="1">1. I am JUST here for the snacks</li>
                         <li data-excitment="2">2. I know the name of the starting QB</li>
                         <li data-excitment="3">3. Not my favourite team, but I have a team to root for</li>
@@ -36,7 +37,7 @@
 
                     <ul class="serving cf">
                         <h3>how many people</h3>
-                        <input type="range" min="1" max="5" value="5" step="1" list="steps">
+                        <input type="range" min="1" max="5" value="5" step="1" list="steps" class="list">
                         <datalist id="steps">
                             <option data-serving="1">1</option>
                             <option data-serving="2">2</option>
@@ -45,19 +46,15 @@
                             <option data-serving="5">5</option>
                         </datalist>
                     </ul>
-
-       <!--  
-                    
-                    <ul class="ul-spicy">
-                        <li data-spicy="1">1. Spice, please!</li>
-                        <li data-spicy="2">2. As long as there's no actual fire, I'm good</li>
-                        <li data-spicy="3">3. Spicy, like pepper? No thanks!</li>
-                    </ul>
-
-                     -->
                 </nav>
                 <button class="submit">GIVE ME THE SNACKS</button>
             </section>
+
+            <header>
+               <h2> My excitment level: <span class="how-jazzed"></span></h2>
+               <h2>And this is how concerned I am about my health: <span class="rabbit-food-level"></span></h2>
+               <h2>no. people<span class="how-many-people"></span> </h2>
+           </header>
 
             <section class="snacks"></section>
             <footer>

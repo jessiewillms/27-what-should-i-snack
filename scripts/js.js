@@ -72,14 +72,9 @@ var getsServingSize = "";
 //     $('.how-many-people').html(getsServingSize)
 // });
 
-$('#steps option').on('change', function() {
-    getsServingSize = $(this).attr('data-serving');
-
-    pizza = $(this).val();
-    pizza3 = $(this).attr('data-serving')();
-
-    console.log('ok', pizza, pizza3)
-    $('.how-many-people').html(getsServingSize)
+$('input').change(function() {
+    var getsServingSize = $(this).val();
+    console.log(getsServingSize)
 });
 
 $('li').click(function() {
